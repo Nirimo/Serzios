@@ -100,7 +100,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-        name: Execute deploy
       - run: | 
           wget https://raw.githubusercontent.com/luucfr/call-webhook-tailscale/main/docker-compose.yml
           docker-compose up -d 
