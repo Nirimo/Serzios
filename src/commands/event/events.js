@@ -44,7 +44,7 @@ module.exports = {
             clearInterval(interval);
             const chestEntries = Object.entries(client.chest);
             const sortedEntries = chestEntries.sort((a, b) => b[1].number - a[1].number);
-            const topEntries = sortedEntries.slice(0, 10); 
+            const topEntries = sortedEntries.slice(0, 1); 
             let leaderboard;
             topEntries.forEach((entry, index) => {
                 const memberId = entry[0];

@@ -3,16 +3,12 @@ module.exports = {
     run: async (client, interaction ) => {
         const chestEntries = Object.entries(client.chest);
         const sortedEntries = chestEntries.sort((a, b) => b[1].number - a[1].number);
-
-        const topEntries = sortedEntries.slice(0, 10); // Obtenir les 10 premiers membres
-
-        let leaderboard = "Leaderboard:\n";
+        const topEntries = sortedEntries.slice(0, 1); 
+        let leaderboard;
         topEntries.forEach((entry, index) => {
             const memberId = entry[0];
-            const coins = entry[1].number;
             const member = client.users.cache.get(memberId);
-
-        leaderboard += `${index + 1}. ${member} - Coins: ${coins}\n`;
+            leaderboard = member;
         });
 
         console.log(leaderboard);
