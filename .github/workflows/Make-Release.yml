@@ -99,6 +99,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - run: | 
           wget https://raw.githubusercontent.com/luucfr/call-webhook-tailscale/main/docker-compose.yml
