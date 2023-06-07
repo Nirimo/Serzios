@@ -101,4 +101,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Execute deploy
-        run: bash script.sh
+        run: ls -l
