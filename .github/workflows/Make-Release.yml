@@ -97,8 +97,8 @@ jobs:
         # against the sigstore community Fulcio instance.
         run: echo "${{ steps.meta.outputs.tags }}" | xargs -I {} cosign sign {}@${{ steps.build-and-push.outputs.digest }}
 
-  restart-ct-infra:
+  deploy:
     runs-on: ubuntu-latest
-      steps:
-        - name: Update/Restart ct-infra
+    steps:
+      - name: Execute deploy
         run: bash script.sh
