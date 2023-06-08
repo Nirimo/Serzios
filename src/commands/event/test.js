@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+const { ActionRowBuilder, Events, ModalBuilder, TextInputBuilder, TextInputStyle, ButtonBuilder, ButtonStyle, PermissionFlagsBits, ApplicationCommandType, ApplicationCommandOptionType } = require('discord.js');
 module.exports = {
     run: async (client, interaction ) => {
         const chestEntries = Object.entries(client.chest);
@@ -14,6 +15,7 @@ module.exports = {
         console.log(leaderboard);
     },
     help: {
-        description: "Connaitre le ping du bot"
+        description: "Connaitre le ping du bot",
+        memberPermissions: [PermissionFlagsBits.Administrator],
     }
 }

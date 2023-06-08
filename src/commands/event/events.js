@@ -59,10 +59,20 @@ module.exports = {
             client.embeds["embeds"].setAuthor({ name: `Classement définitif des scores (clôturé)`})
             client.msg["message"].edit({embeds: [client.embeds["embeds"]], components: []});
             console.log("Event terminer !")
+            client.chest = {};
+            client.clic = {};
+            client.clic["clic"] = {};
+            client.total = {};
+            client.msg = {};
+            client.button = {};
+            client.embeds = {};
+            client.lastmember = {};
+            client.lastcoin = {};
         });
 },
     help: {
         description: "Lancer un event",
+        memberPermissions: [PermissionFlagsBits.Administrator],
         options: [
             {
                 name: "channel",
