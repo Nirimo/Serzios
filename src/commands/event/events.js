@@ -31,10 +31,10 @@ module.exports = {
         client.msg["texte"] = await chanel.send({content: `Juste en dessous de ce message, vous trouverez un bouton affichant un nombre de coins qui augmente progressivement avec le temps.\n\nCes coins sont stockés dans un réservoir commun partagé par tous les utilisateurs du serveur.Les coins se génèrent de manière cadencée toutes les minutes et s’accumulent dans le réservoir.\nLorsqu'une personne clique sur le bouton, elle collecte tous les coins et le réservoir est vidé.\n\nVotre score pour le classement sera déterminé par le total des coins que vous avez collectés.`})
         client.msg["message"] = await chanel.send({embeds: [client.embeds["embeds"]], components: [client.button["button"]]})
         client.msg["interval"] = setInterval(async () => {
-            client.total["coffre"] = client.total["coffre"] + 1;
+            client.total["coffre"] = client.total["coffre"] + 2;
             client.button["button"].components[0].setLabel(`${client.total["coffre"]} coins`);
             client.msg["message"].edit({embeds: [client.embeds["embeds"]], components: [client.button["button"]]});
-        }, 1000)
+        }, 2000)
         function wait(delay) {
             return new Promise(function(resolve) {
               setTimeout(resolve, delay);
