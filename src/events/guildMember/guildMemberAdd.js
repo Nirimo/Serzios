@@ -37,6 +37,6 @@ module.exports = async (client, params) => {
                     .setLabel(`Souhaiter la bienvenue`)
                     .setStyle(ButtonStyle.Secondary)
             )
-    client.channels.fetch('1077981211596701726').then(chan => {chan.send({embeds: [embednew], components: [remercier]})});
+    client.channels.fetch('1123219750860881960').then(chan => {chan.send({embeds: [embednew], components: [remercier]})});
     client.channels.cache.get(`1096404315398217748`).send({embeds: [embednewlogs]})
 };
